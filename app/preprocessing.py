@@ -24,4 +24,4 @@ df = pd.concat([df, encoded_variables], axis=1)
 # Fit and save model
 X, y = df.drop('left', 1), df.loc[:, 'left']
 clf = LGBMClassifier().fit(X, y)
-pickle.dump(clf, open('../app/data/model.pickle', 'wb'))
+pickle.dump(clf, open('./data/model.pickle', 'wb'))
