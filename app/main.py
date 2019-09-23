@@ -35,6 +35,11 @@ class Data(BaseModel):
     salary: str
 
 
+@app.get("/")
+def home():
+    return "Predicting turnover"
+
+
 @app.post("/predict")
 def predict(data: Data):
     try:
