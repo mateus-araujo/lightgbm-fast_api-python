@@ -54,7 +54,13 @@ def predict(data: Data):
 
         prediction = clf.predict(to_predict.reshape(1, -1))
 
-        return {"prediction": int(prediction[0])}
+        return {
+            "data": {
+                "prediction": {
+                    "left": int(prediction[0])
+                }
+            }
+        }
 
     except:
         logger.error("Something went wrong!")

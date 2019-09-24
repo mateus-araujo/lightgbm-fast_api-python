@@ -1,6 +1,8 @@
+cython
 email-validator
 fastapi
 numpy
+pandas
 pydantic
 scikit-learn
 scipy
